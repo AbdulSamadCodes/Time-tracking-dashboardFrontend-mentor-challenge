@@ -1,0 +1,219 @@
+/* google font Rubik link */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* custom properties */
+
+:root {
+  /* spacing */
+  --main-container-padding: 25px 20px;
+  --card-padding-block: 20px;
+  --card-padding-inline: 20px;
+
+  /* widths */
+  --component-container-width: 300px;
+
+  /* colors */
+  --clr-blue: hsl(246, 80%, 60%);
+  --clr-light-red-work: hsl(15, 100%, 70%);
+  --clr-soft-blue: hsl(195, 74%, 62%);
+  --clr-light-right-study: hsl(348, 100%, 68%);
+  --clr-lime: hsl(145, 58%, 55%);
+  --clr-violet: hsl(264, 64%, 52%);
+  --clr-soft: hsl(43, 84%, 65%);
+
+  --clr-very-dark-blue: hsl(226, 43%, 10%);
+  --clr-dark-blue: hsl(235, 46%, 20%);
+  --clr-desaturated-blue: hsl(235, 45%, 61%);
+  --clr-pale-blue: hsl(236, 100%, 87%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* typography */
+  --ff-Rubik: "Rubik", sans-serif;
+
+  --fs-user-name: 2rem;
+
+  /* border radius */
+  --card-border-radius: 10px;
+}
+
+
+/*===reset===*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+a,
+span,
+input {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+form,
+input,
+button,
+select,
+option {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 1px solid black;
+  outline-offset: -3px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+  scrollbar-width: thin;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--clr-very-dark-blue);
+  font-family: var(--ff-Rubik);
+  font-size: 1.4rem;
+}
+
+/*===utilitty  classes===*/
+
+.flex {
+  display: flex;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+}
+
+.relative {
+  position: relative;
+  isolation: isolate;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+  z-index: -1;
+}
+
+.margin-inline-auto {
+  margin-inline: auto;
+}
+
+/* reused styles */
+
+.text-clr-white {
+  color: var(--clr-white);
+}
+
+.text-clr-light {
+  color: var(--clr-pale-blue);
+}
+
+.bg-dark-blue {
+  background-color: var(--clr-dark-blue);
+}
+
+.bg-blue {
+  background-color: var(--clr-blue);
+}
+
+.has-border-radius {
+  border-radius: var(--card-border-radius);
+}
+
+/* main styles */
+.main-container {
+  padding: var(--main-container-padding);
+}
+
+.component__container {
+  --gap: 20px;
+
+  max-width: var(--component-container-width);
+  gap: var(--gap);
+}
+
+.user__profile {
+  gap: var(--gap);
+  padding-block: var(--card-padding-block);
+  padding-inline: var(--card-padding-inline);
+}
+
+.user__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--clr-white);
+  overflow: hidden;
+}
+
+.user__name {
+  font-size: var(--fs-user-name);
+  font-weight: 100;
+  margin-block-start: 8px;
+}
+
+.report__title {
+  font-size: 1.5rem;
+  line-height: 0.5;
+}
+
+.cta__container {
+  padding-block-end: var(--card-padding-block);
+}
+
+.tabs__wrapper {
+  justify-content: space-evenly;
+  padding-block-start: var(--card-padding-block);
+}
+
+.tab {
+  font-weight: 100;
+}
