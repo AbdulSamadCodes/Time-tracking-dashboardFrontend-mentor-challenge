@@ -17,10 +17,11 @@
 <body>
 
   <!--- main container --->
-  <div class="main-container">
+  <div class= "main-container">
     <div class="component__container grid margin-inline-auto">
-      <div class="cta__container card   bg-dark-blue has-border-radius">
-        <div class="user__profile align-items-center flex relative bg-blue has-border-radius" style="--gap:20px;">
+      <div class="cta__container card   bg-dark-blue has-border-radius flex flex-direction-column">
+        <div class="user__profile align-items-center flex flex-wrap relative bg-blue has-border-radius"
+          >
 
           <div class="user__avatar">
             <img src="/images/image-jeremy.png">
@@ -37,20 +38,192 @@
           </div>
         </div>
 
-        <div class="tabs__wrapper flex">
-          <button class="tab text-clr-white">
+        <div class="tabs__wrapper flex flex-wrap">
+          <button class="tab text-clr-white" tabindex="0" data-tab data-daily-tab>
             Daily
           </button>
 
-          <button class="tab text-clr-white">
+          <button class="tab text-clr-white" data-tab tabindex="1" data-weekly-tab>
             Weekly
           </button>
 
-          <button class="tab text-clr-white">
+          <button class="tab text-clr-white" data-tab tabindex="0" data-monthly-tab>
             Monthly
           </button>
         </div>
       </div>
+
+      <div class="tasks__wrapper">
+        <ul class="tasks__list grid">
+          <li class="task__card has-border-radius card__work relative" data-bg-orange data-card-work>
+            <img src="/images/icon-work.svg" class="card__icon absolute" width="60">
+            <div class="card__data has-border-radius">
+              <div class="card__data_wrapper flex align-items-center justify-content-between">
+                <h2 class="card__title text-clr-white">
+                  Work
+                </h2>
+                <div class="icon__ellipsis">
+                  <img src="/images/icon-ellipsis.svg">
+                </div>
+              </div>
+
+              <div class="card__data__wrapper flex align-items-center justify-content-between">
+                <h2 class="task__time text-clr-white" data-task-time>
+                  5hrs
+                </h2>
+
+                <p class="last__week__data text-clr-light" data-last-week-data>
+                  Previous - 7hrs
+                </p>
+
+              </div>
+
+            </div>
+
+          </li>
+
+          <li class="task__card has-border-radius card__work relative" data-bg-cyan data-card-play>
+            <img src="/images/icon-play.svg" class="card__icon absolute" width="60">
+            <div class="card__data has-border-radius">
+              <div class="card__data_wrapper flex align-items-center justify-content-between">
+                <h2 class="card__title text-clr-white">
+                  Play
+                </h2>
+                <div class="icon__ellipsis">
+                  <img src="/images/icon-ellipsis.svg">
+                </div>
+              </div>
+
+              <div class="card__data__wrapper flex align-items-center justify-content-between">
+                <h2 class="task__time text-clr-white" data-task-time>
+                  10hrs
+                </h2>
+
+                <p class="last__week__data text-clr-light" data-last-week-data>
+                  Previous - 8hrs
+                </p>
+
+              </div>
+
+            </div>
+
+
+
+          </li>
+
+          <li class="task__card has-border-radius card__work relative" data-bg-light_red data-study-play>
+            <img src="/images/icon-study.svg" class="card__icon absolute" width="60">
+            <div class="card__data has-border-radius">
+              <div class="card__data_wrapper flex align-items-center justify-content-between">
+                <h2 class="card__title text-clr-white">
+                  Study
+                </h2>
+                <div class="icon__ellipsis">
+                  <img src="/images/icon-ellipsis.svg">
+                </div>
+              </div>
+
+              <div class="card__data__wrapper flex align-items-center justify-content-between">
+                <h2 class="task__time text-clr-white" data-task-time>
+                  10hrs
+                </h2>
+
+                <p class="last__week__data text-clr-light" data-last-week-data>
+                  Previous - 8hrs
+                </p>
+
+              </div>
+
+            </div>
+
+
+          </li>
+
+          <li class="task__card has-border-radius card__work relative" data-bg-green data-card-exercise>
+            <img src="/images/icon-exercise.svg" class="card__icon absolute" width="60">
+            <div class="card__data has-border-radius">
+              <div class="card__data_wrapper flex align-items-center justify-content-between">
+                <h2 class="card__title text-clr-white">
+                  Exercise
+                </h2>
+                <div class="icon__ellipsis">
+                  <img src="/images/icon-ellipsis.svg">
+                </div>
+              </div>
+
+              <div class="card__data__wrapper flex align-items-center justify-content-between">
+                <h2 class="task__time text-clr-white" data-task-time>
+                  4hrs
+                </h2>
+
+                <p class="last__week__data text-clr-light" data-last-week-data>
+                  Previous - 5hrs
+                </p>
+
+              </div>
+
+            </div>
+
+          </li>
+
+          <li class="task__card has-border-radius card__work relative" data-bg-violet data-card-social>
+            <img src="/images/icon-social.svg" class="card__icon absolute" width="60">
+            <div class="card__data has-border-radius">
+              <div class="card__data_wrapper flex align-items-center justify-content-between">
+                <h2 class="card__title text-clr-white">
+                  Social
+                </h2>
+                <div class="icon__ellipsis">
+                  <img src="/images/icon-ellipsis.svg">
+                </div>
+              </div>
+
+              <div class="card__data__wrapper flex align-items-center justify-content-between">
+                <h2 class="task__time text-clr-white" data-task-time>
+                  5hrs
+                </h2>
+
+                <p class="last__week__data text-clr-light" data-last-week-data>
+                  Previous - 10hrs
+                </p>
+
+              </div>
+
+            </div>
+
+          </li>
+
+          <li class="task__card has-border-radius card__work relative" data-bg-yellow data-card-self-care>
+            <img src="/images/icon-self-care.svg" class="card__icon absolute" width="60">
+            <div class="card__data has-border-radius">
+              <div class="card__data_wrapper flex align-items-center justify-content-between">
+                <h2 class="card__title text-clr-white">
+                  Self Care
+                </h2>
+                <div class="icon__ellipsis">
+                  <img src="/images/icon-ellipsis.svg">
+                </div>
+              </div>
+
+              <div class="card__data__wrapper flex align-items-center justify-content-between">
+                <h2 class="task__time text-clr-white" data-task-time>
+                  2hrs
+                </h2>
+
+                <p class="last__week__data text-clr-light" data-last-week-data>
+                  Previous - 2hrs
+                </p>
+
+              </div>
+
+            </div>
+
+          </li>
+
+
+        </ul>
+      </div>
+
     </div>
   </div>
 
