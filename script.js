@@ -4,8 +4,6 @@ const tabsList = document.querySelectorAll("[data-tab]");
 //function to handle tabs
 function handleTabs(currentTab) {
   const notSelectedTabs = Array.from(tabsList).filter((tab) => tab !== currentTab);
-
-  console.log(notSelectedTabs)
   notSelectedTabs.forEach((notSelectedTab) => {
     notSelectedTab.style.color = "hsl(0, 0%, 100%)";
   });
@@ -32,17 +30,22 @@ function updateData(data, eventObject) {
 
 // async function to fetch data from json file
 async function fetchData() {
-  const response = await fetch("/JSON/data.json");
-  const data = response.json();
-
-  return data;
+  try {
+    const response = await fetch("/JSON/data.json");
+    const data = response.json();
+    return data;
+  }
+  catch {
+    alert("Error loading data");
+  }
 }
 
 //function to handle data
 function handleData() {
   fetchData().then((tasks) => tasks).then((data) => {
-    tabsList.forEach((tab) => tab.addEventListener("click", (e) => updateData(data, e)));
-  });
+    tabsList.forEach((tab) => tab.addEventListener("click", (e) => updateData(data, e)))
+  }).
+    catch(() => alert("Error loading data"));
 }
 
 handleData();
